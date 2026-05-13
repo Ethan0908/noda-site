@@ -1,32 +1,33 @@
-const header = document.querySelector('[data-header]');
-const nav = document.querySelector('[data-nav]');
-const navToggle = document.querySelector('[data-nav-toggle]');
-const contactForm = document.querySelector('[data-contact-form]');
-const formStatus = document.querySelector('[data-form-status]');
+const header = document.querySelector("[data-header]");
+const nav = document.querySelector(".site-nav");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const navLinks = document.querySelectorAll(".site-nav a");
 
-function syncHeader() {
-  header.classList.toggle('is-scrolled', window.scrollY > 24);
+function updateHeaderState() {
+  header.classList.toggle("is-scrolled", window.scrollY > 24);
 }
 
-syncHeader();
-window.addEventListener('scroll', syncHeader, { passive: true });
+function setMenu(open) {
+  nav.classList.toggle("is-open", open);
+  header.classList.toggle("is-open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
 
-navToggle.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('is-open');
-  header.classList.toggle('is-open', isOpen);
-  navToggle.setAttribute('aria-expanded', String(isOpen));
+updateHeaderState();
+window.addEventListener("scroll", updateHeaderState, { passive: true });
+
+navToggle.addEventListener("click", () => {
+  const isOpen = nav.classList.contains("is-open");
+  setMenu(!isOpen);
 });
 
-nav.addEventListener('click', (event) => {
-  if (event.target.matches('a')) {
-    nav.classList.remove('is-open');
-    header.classList.remove('is-open');
-    navToggle.setAttribute('aria-expanded', 'false');
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => setMenu(false));
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    setMenu(false);
   }
-});
-
-contactForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  formStatus.textContent = 'Thank you. This sample form is ready to connect to a reservation workflow.';
-  contactForm.reset();
 });
