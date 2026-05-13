@@ -1,33 +1,24 @@
 const header = document.querySelector("[data-header]");
-const nav = document.querySelector(".site-nav");
+const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
-const navLinks = document.querySelectorAll(".site-nav a");
 
-function updateHeaderState() {
-  header.classList.toggle("is-scrolled", window.scrollY > 24);
-}
+const setHeaderState = () => {
+  header.classList.toggle("is-scrolled", window.scrollY > 12);
+};
 
-function setMenu(open) {
-  nav.classList.toggle("is-open", open);
-  header.classList.toggle("is-open", open);
-  navToggle.setAttribute("aria-expanded", String(open));
-  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-}
-
-updateHeaderState();
-window.addEventListener("scroll", updateHeaderState, { passive: true });
+setHeaderState();
+window.addEventListener("scroll", setHeaderState, { passive: true });
 
 navToggle.addEventListener("click", () => {
-  const isOpen = nav.classList.contains("is-open");
-  setMenu(!isOpen);
+  const isOpen = nav.classList.toggle("is-open");
+  header.classList.toggle("is-open", isOpen);
+  navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => setMenu(false));
-});
-
-window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    setMenu(false);
+nav.addEventListener("click", (event) => {
+  if (event.target instanceof HTMLAnchorElement) {
+    nav.classList.remove("is-open");
+    header.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
   }
 });
