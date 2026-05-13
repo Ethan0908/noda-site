@@ -1,182 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Unofficial sample website concept for noda, a refined sushi restaurant in Manhattan.">
-  <title>noda | Manhattan Sushi</title>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="noda home">noda</a>
-    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="site-nav" data-nav>
-      <a href="#menu">Menu</a>
-      <a href="#why">Experience</a>
-      <a href="#area">Manhattan</a>
-      <a class="nav-cta" href="#contact">Reserve</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An unofficial sample website concept for noda, a refined sushi restaurant experience in Manhattan."
+    />
+    <title>noda | Manhattan Sushi Restaurant Concept</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="noda home">noda</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#area">Manhattan</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="#contact">Reserve</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media" role="img" aria-label="Chef preparing sushi at a counter"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">Manhattan sushi restaurant</p>
-        <h1 id="hero-title">noda</h1>
-        <p class="hero-copy">A composed sushi counter concept shaped around pristine fish, quiet service, and a precise omakase rhythm in the heart of New York City.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#contact">Plan a Visit</a>
-          <a class="button secondary" href="#menu">View Highlights</a>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" role="img" aria-label="A refined sushi counter with plated nigiri and warm lighting"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Manhattan Omakase</p>
+          <h1 id="hero-title">noda</h1>
+          <p class="hero-copy">
+            A focused sushi counter concept shaped around seasonal fish, exacting technique, and calm hospitality in the
+            heart of New York City.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Plan a Visit</a>
+            <a class="button secondary" href="#menu">View Highlights</a>
+          </div>
         </div>
-      </div>
-    </section>
+        <aside class="hero-panel" aria-label="Restaurant details">
+          <span>Style</span>
+          <strong>Chef-led sushi</strong>
+          <span>Setting</span>
+          <strong>Intimate counter</strong>
+          <span>Location</span>
+          <strong>Manhattan, NY</strong>
+        </aside>
+      </section>
 
-    <section class="section intro" aria-label="Restaurant overview">
-      <div class="section-inner intro-grid">
-        <div>
-          <p class="eyebrow">Refined and focused</p>
-          <h2>A sushi experience built around balance.</h2>
-        </div>
-        <p>Designed as an elegant sample website concept, this one-page presentation frames noda as an intimate Manhattan destination for guests who value craftsmanship, seasonal ingredients, and attentive pacing.</p>
-      </div>
-    </section>
+      <section class="intro section-pad">
+        <div class="section-kicker">A Modern Counter Experience</div>
+        <p>
+          This sample concept presents noda as a precise, quietly luxurious sushi destination: restrained design, polished
+          service, and a menu narrative that lets the ingredients lead.
+        </p>
+      </section>
 
-    <section class="section menu-section" id="menu" aria-labelledby="menu-title">
-      <div class="section-inner">
+      <section class="menu section-pad" id="menu" aria-labelledby="menu-title">
         <div class="section-heading">
-          <p class="eyebrow">Menu highlights</p>
-          <h2 id="menu-title">A concise omakase-forward offering.</h2>
+          <p class="eyebrow">Menu Highlights</p>
+          <h2 id="menu-title">Seasonal, measured, and ingredient-first.</h2>
         </div>
         <div class="highlight-grid">
           <article class="highlight-card">
-            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=900&q=80" alt="Assorted nigiri presented on a dark plate">
-            <div>
-              <h3>Seasonal Nigiri</h3>
-              <p>Precise cuts, carefully seasoned rice, and fish selected for clarity, texture, and finish.</p>
-            </div>
+            <span class="card-number">01</span>
+            <h3>Omakase Progression</h3>
+            <p>Courses move with intention from bright opening bites to richer cuts, warm rice, and focused finishing notes.</p>
           </article>
           <article class="highlight-card">
-            <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=900&q=80" alt="Sashimi and garnishes arranged on a plate">
-            <div>
-              <h3>Chef's Progression</h3>
-              <p>A paced counter experience that moves from delicate starters into richer, deeper flavors.</p>
-            </div>
+            <span class="card-number">02</span>
+            <h3>Nigiri Craft</h3>
+            <p>Fish, rice, seasoning, and temperature are treated as one composition rather than separate parts.</p>
           </article>
           <article class="highlight-card">
-            <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=900&q=80" alt="Sushi rolls and Japanese dishes on a table">
-            <div>
-              <h3>Japanese Pairings</h3>
-              <p>Thoughtful beverage pairings and subtle accompaniments chosen to support the meal.</p>
-            </div>
+            <span class="card-number">03</span>
+            <h3>Pairing Program</h3>
+            <p>A concise sake, wine, and spirit selection supports the meal without crowding the counter experience.</p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section why-section" id="why" aria-labelledby="why-title">
-      <div class="section-inner why-grid">
-        <div class="why-image" role="img" aria-label="Minimal sushi counter with plated dishes"></div>
-        <div class="why-content">
-          <p class="eyebrow">Why choose us</p>
-          <h2 id="why-title">Quiet detail from arrival to final bite.</h2>
+      <section class="feature-band" id="experience" aria-labelledby="experience-title">
+        <div class="feature-image" role="img" aria-label="Chef preparing sushi behind a minimalist counter"></div>
+        <div class="feature-copy">
+          <p class="eyebrow">Why Choose Us</p>
+          <h2 id="experience-title">Designed for guests who value detail.</h2>
           <div class="reasons">
-            <article>
-              <span>01</span>
-              <h3>Counter-focused pacing</h3>
-              <p>Each course is presented with intention, giving the meal a calm, attentive flow.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Ingredient clarity</h3>
-              <p>Clean flavors and restrained garnishes keep the focus on quality seafood and rice.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Manhattan polish</h3>
-              <p>A modern atmosphere suited to celebrations, client dinners, and focused evenings out.</p>
-            </article>
+            <div>
+              <h3>Quiet Precision</h3>
+              <p>Every detail is edited: pacing, plating, lighting, sound, and the rhythm of service.</p>
+            </div>
+            <div>
+              <h3>Seasonal Sourcing</h3>
+              <p>The menu can evolve with market availability, highlighting texture, freshness, and balance.</p>
+            </div>
+            <div>
+              <h3>Manhattan Ease</h3>
+              <p>A destination experience presented with the clarity and convenience expected in New York.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section area-section" id="area" aria-labelledby="area-title">
-      <div class="section-inner area-grid">
+      <section class="service-area section-pad" id="area" aria-labelledby="area-title">
         <div>
-          <p class="eyebrow">Service area</p>
+          <p class="eyebrow">Service Area</p>
           <h2 id="area-title">Serving guests in Manhattan.</h2>
-          <p>Positioned for New York diners, hotel guests, and visitors planning a refined sushi experience in Manhattan.</p>
         </div>
-        <div class="area-panel" aria-label="Service area details">
-          <div>
-            <span>Primary area</span>
-            <strong>Manhattan, NY</strong>
-          </div>
-          <div>
-            <span>Best for</span>
-            <strong>Omakase dining, date nights, private celebrations</strong>
-          </div>
-          <div>
-            <span>Reservations</span>
-            <strong>Use the contact request below</strong>
-          </div>
+        <p>
+          Built as a refined one-page presence for diners planning a special evening, private celebration, or focused
+          omakase reservation in Manhattan and greater New York City.
+        </p>
+        <div class="area-tags" aria-label="Nearby areas">
+          <span>Flatiron</span>
+          <span>NoMad</span>
+          <span>Midtown</span>
+          <span>Chelsea</span>
+          <span>Union Square</span>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-inner">
-        <p class="eyebrow">Contact call-to-action</p>
-        <h2 id="contact-title">Plan an elegant sushi evening in Manhattan.</h2>
-        <p>This mockup uses a simple static inquiry form suitable for a Vercel-ready concept site.</p>
-        <form class="contact-form" data-contact-form>
-          <label>
-            <span>Name</span>
-            <input type="text" name="name" autocomplete="name" required>
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>
-            <span>Preferred date</span>
-            <input type="date" name="date">
-          </label>
-          <label>
-            <span>Party size</span>
-            <select name="party">
-              <option>2 guests</option>
-              <option>3-4 guests</option>
-              <option>5-6 guests</option>
-              <option>Private inquiry</option>
-            </select>
-          </label>
-          <label class="full">
-            <span>Message</span>
-            <textarea name="message" rows="4" placeholder="Share timing, occasion, or seating preferences."></textarea>
-          </label>
-          <button class="button primary" type="submit">Submit Inquiry</button>
-          <p class="form-status" role="status" data-form-status></p>
-        </form>
-      </div>
-    </section>
-  </main>
+      <section class="contact-cta" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Reserve an intimate Manhattan sushi experience.</h2>
+          <p>
+            For this sample concept, inquiries are directed through the current website because no phone number was
+            provided in the brief.
+          </p>
+        </div>
+        <a class="button primary dark" href="https://www.noda.nyc/" target="_blank" rel="noopener">Visit Current Website</a>
+      </section>
+    </main>
 
-  <footer class="site-footer">
-    <p>Unofficial sample website concept.</p>
-  </footer>
+    <footer class="site-footer">
+      <p>Unofficial sample website concept.</p>
+      <a href="#top">Back to top</a>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
